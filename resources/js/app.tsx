@@ -31,7 +31,7 @@ createInertiaApp({
       </React.StrictMode>
     );
   },
-  progress: {
-    color: '#4B5563',
-  },
+  // progress: {
+  //   color: '#4B5563',
+  // },
 });
