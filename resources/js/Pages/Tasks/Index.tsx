@@ -47,7 +47,7 @@ const Index: React.FC = () => {
               >
                 <div>
                   <h2 className="font-semibold text-red-500" style={{ color: 'red', fontWeight: '600' }}>
-  {task.completed ? 'ok with LIST' : 'Task is not completed'}
+                        {task.completed ? 'ok with LIST' : 'Task is not completed'}
 </h2>
                   <h1 className='font semi-bold text-green-500'>{task.title}</h1>
                   {task.description && (

@@ -65,11 +65,17 @@ const Edit: React.FC<Props> = ({ task }) => {
         </div>
 
         <div className="flex justify-between items-center mt-6">
-          <Link href="/tasks" className="text-gray-200 hover:underline">
+          <Link href="/tasks" className="text-blue-600 hover:underline">
             ← Back
           </Link>
 
-          
+          <button
+            type="submit"
+            disabled={processing}
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            {processing ? 'Saving...' : 'Update Task'}
+          </button>
         </div>
       </form>
     </div>
