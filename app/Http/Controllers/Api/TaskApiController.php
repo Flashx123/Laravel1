@@ -13,32 +13,32 @@ class TaskApiController extends Controller
         return Task::all();
     }
 
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-        ]);
+    // public function store(Request $request)
+    // {
+    //     $validated = $request->validate([
+    //         'title' => 'required|string|max:255',
+    //         'description' => 'string',
+    //     ]);
 
-        return Task::create($validated);
-    }
+    //     return Task::create($validated);
+    // }
 
-    public function update(Request $request, Task $task)
-    {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'completed' => 'boolean',
-        ]);
+    // public function update(Request $request, Task $task)
+    // {
+    //     $validated = $request->validate([
+    //         'title' => 'required|string|max:255',
+    //         'description' => 'string',
+    //         'completed' => 'boolean',
+    //     ]);
 
-        $task->update($validated);
+    //     $task->update($validated);
 
-        return $task;
-    }
+    //     return $task;
+    // }
 
-    public function destroy(Task $task)
-    {
-        $task->delete();
-        return response()->json(['message' => 'Deleted successfully']);
-    }
+    // public function destroy(Task $task)
+    // {
+    //     $task->delete();
+    //     return response()->json(['message' => 'Deleted successfully']);
+    // }
 }

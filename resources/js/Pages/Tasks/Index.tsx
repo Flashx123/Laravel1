@@ -46,27 +46,27 @@ const Index: React.FC = () => {
                 className="border rounded p-4 flex justify-between items-center"
               >
                 <div>
-                  <h2 className="font-semibold">
-                    {task.completed ? '✅' : '⬜'} {task.title}
+                  <h2 className="font-semibold text-red-500">
+                    {task.completed ? 'ok with LIST' : 'Nope'} {task.title}
                   </h2>
                   {task.description && (
-                    <p className="text-sm text-gray-600">{task.description}</p>
+                    <p className="text-sm text-white">{task.description}</p>
                   )}
                 </div>
-                <div className="flex gap-2">
-                  <Link
-                    href={`/tasks/${task.id}/edit`}
-                    className="text-blue-500 hover:underline"
-                  >
-                    Edit
-                  </Link>
-                  <button
-                    onClick={() => handleDelete(task.id)}
-                    className="text-red-500 hover:underline"
-                  >
-                    Delete
-                  </button>
-                </div>
+                <div className="flex items-center space-x-4"> {/* Add flex and space-x-4 */}
+    <Link
+        href={`/tasks/${task.id}/edit`}  ///To the api point
+        className="text-blue-500 hover:underline"
+    >
+        Edit
+    </Link>
+    <button
+        onClick={() => handleDelete(task.id)}
+        className="text-red-500 hover:underline"
+    >
+        Delete
+    </button>
+</div>
               </li>
             ))}
           </ul>

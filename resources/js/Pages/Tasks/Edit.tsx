@@ -69,13 +69,7 @@ const Edit: React.FC<Props> = ({ task }) => {
             ← Back
           </Link>
 
-          <button
-            type="submit"
-            disabled={processing}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-          >
-            {processing ? 'Updating...' : 'Update Task'}
-          </button>
+          
         </div>
       </form>
     </div>

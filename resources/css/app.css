@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* resources/css/app.css */
+
+/*
+   You might already have some existing CSS here from Laravel Breeze/Jetstream
+   or previous styling. Add these lines, or modify existing body/html rules.
+*/
+
+html, body, #app {
+    height: 100%; /* Ensure they take full height */
+    width: 100%; /* Ensure they take full width */
+    margin: 0;
+    padding: 0;
+    background-color: #1a202c; /* A common dark grey (Tailwind's gray-900) */
+    color: #e2e8f0; /* Light text color for contrast */
+}
+
+/* If #app is directly inside body and you want content centered or specific layout */
+#app {
+    display: flex;
+    flex-direction: column;
+    /* Add other layout properties if needed, e.g., for header/footer */
+}
+
+/* You might want to define a default text color for all elements */
+* {
+    color: inherit; /* Inherit the text color from body */
+}
+
+
+
+

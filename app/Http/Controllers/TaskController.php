@@ -24,8 +24,8 @@ class TaskController extends Controller
     public function store(Request $request)   ///Controller 3
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'title' => 'required|string',
+            'description' => 'string',
         ]);
 
         Task::create($request->all());
@@ -43,8 +43,8 @@ class TaskController extends Controller
     public function update(Request $request, Task $task)  ///Controller 5
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'title' => 'required|string',
+            'description' => 'string',
             'completed' => 'boolean',
         ]);
 

@@ -7,7 +7,15 @@ Route::get('/', function () {
     return redirect()->route('tasks.index');
 });
 
-// Group all task routes
+
+use Inertia\Inertia;
+
+Route::get('/api-view', function () {
+    return Inertia::render('Tasks/ApiIndex');
+});
+
+
+
 Route::prefix('tasks')->name('tasks.')->group(function () {
     Route::get('/', [TaskController::class, 'index'])->name('index');         // /tasks
     Route::get('/create', [TaskController::class, 'create'])->name('create'); // /tasks/create
