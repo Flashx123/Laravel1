@@ -15,6 +15,9 @@ const queryClient = new QueryClient();
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
 createInertiaApp({
+
+    
+
   title: (title) => `${title} - ${appName}`,
   resolve: (name) =>
     resolvePageComponent(
@@ -27,6 +30,7 @@ createInertiaApp({
       <React.StrictMode>
         <QueryClientProvider client={queryClient}>
           <App {...props} />
+          
         </QueryClientProvider>
       </React.StrictMode>
     );

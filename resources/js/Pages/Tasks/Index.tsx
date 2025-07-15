@@ -32,7 +32,7 @@ const Index: React.FC = () => {
         href="/tasks/create"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
       >
-        + Create New Task
+          +Create New Task
       </Link>
 
       <div className="mt-6">
@@ -46,28 +46,30 @@ const Index: React.FC = () => {
                 className="border rounded p-4 flex justify-between items-center"
               >
                 <div>
-                  <h2 className="font-semibold text-red-500">
-                    {task.completed ? 'ok with LIST' : 'Nope'} {task.title}
-                  </h2>
+                  <h2 className="font-semibold text-red-500" style={{ color: 'red', fontWeight: '600' }}>
+  {task.completed ? 'ok with LIST' : 'Task is not completed'}
+</h2>
+                  <h1 className='font semi-bold text-green-500'>{task.title}</h1>
                   {task.description && (
                     <p className="text-sm text-white">{task.description}</p>
                   )}
                 </div>
                 <div className="flex items-center space-x-4"> {/* Add flex and space-x-4 */}
-    <Link
-        href={`/tasks/${task.id}/edit`}  ///To the api point
-        className="text-blue-500 hover:underline"
-    >
-        Edit
-    </Link>
-     
-     
-    <button
-        onClick={() => handleDelete(task.id)}
-        className="text-red-500 hover:underline"
-    >
-        Delete
-    </button>
+    <div className="flex items-center gap-4">
+  <Link
+    href={`/tasks/${task.id}/edit`}
+    className="text-blue-500 hover:underline"
+  >
+    Edit
+  </Link>
+
+  <button
+    onClick={() => handleDelete(task.id)}
+    className="text-red-500 hover:underline"
+  >
+    Delete
+  </button>
+</div>
 </div>
               </li>
             ))}

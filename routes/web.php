@@ -14,6 +14,10 @@ Route::get('/api-view', function () {
 
 
 
+
+
+
+
 Route::prefix('tasks')->name('tasks.')->group(function () {
     Route::get('/', [TaskController::class, 'index'])->name('index');         // /tasks
     Route::get('/create', [TaskController::class, 'create'])->name('create'); // /tasks/create
