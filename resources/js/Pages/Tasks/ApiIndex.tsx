@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { Link, router } from '@inertiajs/react';
 
 
 type Task = {
@@ -31,6 +32,7 @@ const ApiIndex: React.FC = () => {
   if (error) return <p className="p-6 text-red-500">Failed to load tasks.</p>;
 
   return (
+    <div className="min-h-screen flex items-center justify-center">
     <div className="p-6 max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold mb-4">Tasks via API (TanStack Query)</h1>
 
@@ -42,7 +44,7 @@ const ApiIndex: React.FC = () => {
             <li key={task.id} className="border p-4 rounded flex justify-between">
               <div>
                 <h2 className="font-semibold">
-                  {task.completed ? 'ok from the lask' : 'Nope!!!'} {task.title}
+                  {(task.id)} . {task.title}
                 </h2>
                 {task.description && (
                   <p className="text-sm text-white">{task.description}</p>
@@ -54,6 +56,16 @@ const ApiIndex: React.FC = () => {
       )}
 
         
+<button
+  onClick={() => router.visit('/tasks')}
+  className="bg-blue-600 text-white px-4 ml-2 items-center py-6 rounded hover:bg-blue-700 transition"
+>
+  Click to go back
+</button>
+
+    </div>
+
+         
 
 
     </div>

@@ -60,6 +60,8 @@ const Index: React.FC = () => {
     >
         Edit
     </Link>
+     
+     
     <button
         onClick={() => handleDelete(task.id)}
         className="text-red-500 hover:underline"

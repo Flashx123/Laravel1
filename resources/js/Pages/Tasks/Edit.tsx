@@ -14,8 +14,8 @@ interface Props {
 
 const Edit: React.FC<Props> = ({ task }) => {
   const { data, setData, patch, processing, errors } = useForm({
-    title: task.title || '',
-    description: task.description || '',
+    title: task.title,
+    description: task.description,
     completed: task.completed || false,
   });
 
@@ -35,7 +35,7 @@ const Edit: React.FC<Props> = ({ task }) => {
             type="text"
             value={data.title}
             onChange={(e) => setData('title', e.target.value)}
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-2 border text-gray-800 rounded"
             required
           />
           {errors.title && (
@@ -48,7 +48,7 @@ const Edit: React.FC<Props> = ({ task }) => {
           <textarea
             value={data.description}
             onChange={(e) => setData('description', e.target.value)}
-            className="w-full px-4 py-2 border rounded"
+            className="w-full px-4 py-2 border text-gray-800 rounded"
           />
           {errors.description && (
             <p className="text-red-500 text-sm mt-1">{errors.description}</p>
@@ -65,7 +65,7 @@ const Edit: React.FC<Props> = ({ task }) => {
         </div>
 
         <div className="flex justify-between items-center mt-6">
-          <Link href="/tasks" className="text-gray-600 hover:underline">
+          <Link href="/tasks" className="text-gray-200 hover:underline">
             ← Back
           </Link>
 
