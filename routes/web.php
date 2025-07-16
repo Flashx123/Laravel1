@@ -7,7 +7,6 @@ use App\Http\Controllers\TaskController;
 
 
 use Inertia\Inertia;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/api-view', function () {   /// the APi get method 
     return Inertia::render('Tasks/ApiIndex');
@@ -15,7 +14,7 @@ Route::get('/api-view', function () {   /// the APi get method
 
 
 Route::get('/', function () {
-    return view('Dashboard');
+    return 'Homepage is working!';
 });
 
 
