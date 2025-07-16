@@ -8,7 +8,7 @@ use App\Http\Controllers\TaskController;
 
 use Inertia\Inertia;
 
-Route::get('/api-view', function () {
+Route::get('/api-view', function () {   /// the APi get method 
     return Inertia::render('Tasks/ApiIndex');
 });
 
