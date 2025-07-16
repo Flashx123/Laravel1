@@ -12,9 +12,8 @@ Route::get('/api-view', function () {   /// the APi get method
     return Inertia::render('Tasks/ApiIndex');
 });
 
-
 Route::get('/', function () {
-    return 'Homepage is working!';
+    return view('welcome');
 });
 
 
