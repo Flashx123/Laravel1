@@ -63,21 +63,18 @@ return [
             ]) : [],
         ],
 
-       'pgsql' => [
+     'pgsql' => [
     'driver' => 'pgsql',
-    'host' => env('DB_HOST', '127.0.0.1'),
-    'port' => env('DB_PORT', '5432'),
-    'database' => env('DB_DATABASE', 'forge'),
-    'username' => env('DB_USERNAME', 'forge'),
-    'password' => env('DB_PASSWORD', ''),
+    'url' => env('DATABASE_URL'),
     'charset' => 'utf8',
     'prefix' => '',
+    'prefix_indexes' => true,
     'schema' => 'public',
-    'sslmode' => 'require', // Required by Neon
-    'options'   => [
-        'options' => '--client_encoding=UTF8 --search_path=public --endpoint=ep-empty-wind-a1v50wru'
-    ],
+    'sslmode' => 'require',
 ],
+
+
+
 
 
 

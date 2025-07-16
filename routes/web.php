@@ -18,6 +18,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('/health', function () {
+    return 'OK';
+});
+
+
 
 
 
