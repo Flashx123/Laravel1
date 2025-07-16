@@ -14,7 +14,7 @@ Route::get('/api-view', function () {   /// the APi get method
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Homepage is working!';
 });
 
 
