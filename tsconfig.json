@@ -9,5 +9,7 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["resources/js"]
+  "include": ["resources/js/**/*",
+    "vite-env.d.ts"
+  ]
 }
