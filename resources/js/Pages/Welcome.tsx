@@ -1,6 +1,11 @@
 import { Link, Head } from '@inertiajs/react';
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 
-export default function Welcome(props) {
+export default function Welcome(props: { auth: { user: any; }; laravelVersion: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; phpVersion: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; }) {
+    function route(arg0: string): string {
+        throw new Error('Function not implemented.');
+    }
+
     return (
         <>
             <Head title="Welcome" />
