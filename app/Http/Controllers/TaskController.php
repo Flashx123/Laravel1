@@ -8,13 +8,14 @@ use Inertia\Inertia;
 
 class TaskController extends Controller
 {
-    public function index()   /////Controller 2
-    {
-        $tasks = Task::all();
-        return Inertia::render('Tasks/Index', [
-            'tasks' => $tasks,
-        ]);
-    }
+    public function index()
+{
+    $tasks = [
+        ['id' => 1, 'title' => 'Sample Task', 'description' => 'No DB used'],
+    ];
+    return Inertia::render('Tasks/Index', ['tasks' => $tasks]);
+}
+
 
     public function create()            ////Controller 1
     {
