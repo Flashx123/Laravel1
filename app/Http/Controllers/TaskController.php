@@ -13,7 +13,9 @@ class TaskController extends Controller
     $tasks = [
         ['id' => 1, 'title' => 'Sample Task', 'description' => 'No DB used'],
     ];
-    return Inertia::render('Tasks/Index', ['tasks' => $tasks]);
+     return \Inertia\Inertia::render('Tasks/Index', [
+        'tasks' => $tasks,
+    ]);
 }
 
 
