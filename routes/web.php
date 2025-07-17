@@ -10,9 +10,9 @@ use Inertia\Inertia;
 
 //use Inertia\Inertia;
 
-Route::get('/api-view', function () {
-    return Inertia::render('Welcome');
-});
+// Route::get('/api-view', function () {
+//     return Inertia::render('Welcome');
+// });
 
 
 
