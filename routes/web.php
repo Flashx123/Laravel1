@@ -10,15 +10,15 @@ use Inertia\Inertia;
 
 //use Inertia\Inertia;
 
-Route::get('/api-view', function () {
-    return Inertia::render('Welcome');
-});
-
-
-
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('/api-view', function () {
+//     return Inertia::render('Welcome');
 // });
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/nulltasks', function () {
     return 'Routes are working';
